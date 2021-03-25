@@ -4,6 +4,7 @@
   import slider from './modules/slider';
   import goUp from './modules/goUp';
   import references from './modules/references';
+  import accordeon from './modules/accordeon';
 
 
   //меню
@@ -17,3 +18,6 @@
 
   // Ссылки
   references();
+
+  // Аккордеон
+  accordeon();

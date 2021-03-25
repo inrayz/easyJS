@@ -1007,6 +1007,9 @@ video#video_background {
 	background: #e9bb26;
 	color: #fff !important;
 }
+.accordeon .element.active .element-content {
+	display: block;
+}
 .accordeon .element .title:before {
 	font-family: "FontAwesome";
 	content: "";
@@ -1025,10 +1028,11 @@ video#video_background {
 	-o-transition: all 200ms ease-out;
 	transition: all 200ms ease-out;
 }
+
 .accordeon .element.active .title:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+.accordeon > div:first-of-type .element.active .element-content {
 	display: block;
 }
 .accordeon .element .title:hover:before {
