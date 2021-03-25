@@ -855,7 +855,14 @@ hr.white {
 .top-slider .item {
 	overflow: hidden;
 	height: 450px;
-	position: relative;
+	position: absolute;
+	width: 100%;
+}
+.item-not-active{
+	opacity: 0;
+}
+.item-active {
+	opacity: 1;
 }
 .top-slider .item:before {
 	content: "";
