@@ -3,6 +3,7 @@
 const goUp = () => {
 
     let goTopBtn = document.querySelector('.up');
+    goTopBtn.classList.add('up-none');
   
     let trackScroll = () => {
     let scrolled = window.pageYOffset;
