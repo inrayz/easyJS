@@ -2,9 +2,15 @@
 
 const slider = () => {
     const slide = document.querySelectorAll('.item'),
-    itemListParent = document.querySelector('.top-slider');
+        text = document.querySelectorAll('.table'),
+        itemListParent = document.querySelector('.top-slider');
     let currentSlide = 0;
 
+    text.forEach((item) => {
+      item.style.visibility = 'visible';
+      item.style.opacity = '1';
+    });
+    
     const autoPlaySlide = () => {
       slide[currentSlide].classList.remove('item-active');
       slide[currentSlide].classList.add('item-not-active');
@@ -17,7 +23,7 @@ const slider = () => {
     };
 
     const startSlide = () => {
-      setInterval(autoPlaySlide, 300000);
+      setInterval(autoPlaySlide, 3000);
     };
     
     startSlide();

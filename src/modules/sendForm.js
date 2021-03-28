@@ -25,7 +25,6 @@ const sendForm = () => {
       statusMessage.textContent = successMessage;
     }, (error) => {
       statusMessage.textContent = errorMessage;
-      console.error(error);
     });
   });
 
@@ -38,12 +37,17 @@ const sendForm = () => {
       if(request.status === 200){
         outputData();
         updatePage();
+        setTimeout(() => {
         modalOverlay.style.display = 'none';
         modalCallback.style.display = 'none';
-        alert(successMessage);
+        }, 2000);
       }else {
         errorData(request.status);
         updatePage();
+        setTimeout(() => {
+        modalOverlay.style.display = 'none';
+        modalCallback.style.display = 'none';
+        }, 3000);
       }
     });
     request.open('POST', './server.php');
@@ -62,7 +66,6 @@ const sendForm = () => {
     const clearInputs = (form) => {
       const inputs = form.querySelectorAll('.form-control');
       inputs.forEach(item => item.value = '');
-      console.log(inputs);
     };
 };
 
