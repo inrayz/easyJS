@@ -6,7 +6,9 @@ const sendForm = () => {
       loadMessage = 'Загрузка...',
       successMessage = 'Спасибо! Мы скоро с вами свяжемся';
   
-  const form = document.querySelector('form');
+  const form = document.querySelector('form'),
+          modalOverlay = document.querySelector('.modal-overlay'),
+          modalCallback = document.querySelector('.modal-callback');
   
   const statusMessage = document.createElement('div');
   
@@ -36,12 +38,15 @@ const sendForm = () => {
       if(request.status === 200){
         outputData();
         updatePage();
+        modalOverlay.style.display = 'none';
+        modalCallback.style.display = 'none';
+        alert(successMessage);
       }else {
         errorData(request.status);
         updatePage();
       }
     });
-    request.open('POST', '.server.php');
+    request.open('POST', './server.php');
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify(body));
   };
