@@ -9,7 +9,7 @@ const sendForm = () => {
   const form = document.querySelector('form'),
           modalOverlay = document.querySelector('.modal-overlay'),
           modalCallback = document.querySelector('.modal-callback');
-  
+
   const statusMessage = document.createElement('div');
   
   form.addEventListener('submit', (event) => {

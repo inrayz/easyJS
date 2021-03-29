@@ -37,6 +37,27 @@ const validation = () => {
         checkInputText(event);
       }
     });
+
+    const name = document.querySelector('input[name=fio]'),
+          tel = document.querySelector('input[name=tel]'),
+          button = document.querySelector('input[type=submit]');
+    
+    name.setAttribute('required', 'required');
+    tel.setAttribute('required', 'required');
+    document.addEventListener('input', () => {
+      console.log(name.value.length);
+      console.log(tel.value.length);
+      if(name.value.length < 2){
+        button.setAttribute('disabled',  "disabled");
+      }else{
+        button.removeAttribute('disabled');
+      }
+      if(tel.value.length < 14){
+        button.setAttribute('disabled',  "disabled");
+      }else{
+        button.removeAttribute('disabled');
+      }
+    });
   };
 
 export default validation;
