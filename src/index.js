@@ -8,6 +8,7 @@
   import sendForm from './modules/sendForm';
   import validation from './modules/validation';
   import maskPhone from './modules/maskPhone';
+  // import carousel from './modules/carousel';
 
 
   // Маска для телефона
@@ -33,3 +34,6 @@
 
   // Валидация
   validation();
+
+  // // Слайдер карусель
+  // carousel();
