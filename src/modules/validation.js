@@ -45,8 +45,6 @@ const validation = () => {
     name.setAttribute('required', 'required');
     tel.setAttribute('required', 'required');
     document.addEventListener('input', () => {
-      console.log(name.value.length);
-      console.log(tel.value.length);
       if(name.value.length < 2){
         button.setAttribute('disabled',  "disabled");
       }else{
